@@ -87,6 +87,11 @@ section {
   padding: 80px 20px;
 }
 
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 /* SOBRE */
 .about {
   max-width: 800px;
@@ -96,7 +101,7 @@ section {
   line-height: 1.6;
 }
 
-/* JUEGOS */
+/* JUEGOS Y APPS */
 .games {
   display: flex;
   justify-content: center;
@@ -161,6 +166,7 @@ section {
 <nav>
   <a href="#about">Sobre</a>
   <a href="#games">Juegos</a>
+  <a href="#apps">Apps</a>
   <a href="#contact">Contactar</a>
 </nav>
 
@@ -182,6 +188,9 @@ section {
 
 <!-- JUEGOS -->
 <section id="games">
+
+  <h2 class="section-title">Juegos</h2>
+
   <div class="games">
 
     <div class="game" onclick="window.open('https://youtu.be/Gkge6qWd2zs?si=9OoFfNYFB3nyXDDx')">
@@ -194,6 +203,22 @@ section {
       <img src="enigma.png" alt="Vaeryn">
       <h3>Vaeryn</h3>
       <p>RPG fantasía survival en desarrollo.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPS -->
+<section id="apps">
+
+  <h2 class="section-title">Apps</h2>
+
+  <div class="games">
+
+    <div class="game" onclick="window.open('https://mafiageta.itch.io/mafiflow', '_blank')">
+      <img src="MafiFlow.png" alt="MafiFlow">
+      <h3>MafiFlow</h3>
+      <p>Administra tus finanzas de forma simple, privada y a tu manera.</p>
     </div>
 
   </div>
