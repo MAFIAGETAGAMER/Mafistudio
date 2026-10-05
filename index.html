@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* BODY - FONDO DEGRADADO */
+/* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
   color: white;
@@ -59,6 +59,27 @@ nav a {
 
 nav a:hover {
   color: gold;
+}
+
+/* SELECTOR DE IDIOMA */
+.language-selector {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-selector:hover {
+  border-color: gold;
+}
+
+.language-selector option {
+  background: #0b0b1c;
+  color: white;
 }
 
 /* LOGO */
@@ -164,24 +185,35 @@ section {
 
 <!-- NAV -->
 <nav>
-  <a href="#about">Sobre</a>
-  <a href="#games">Juegos</a>
-  <a href="#apps">Apps</a>
-  <a href="#contact">Contactar</a>
+  <a href="#about" data-i18n="nav_about">Sobre</a>
+  <a href="#games" data-i18n="nav_games">Juegos</a>
+  <a href="#apps" data-i18n="nav_apps">Apps</a>
+  <a href="#contact" data-i18n="nav_contact">Contactar</a>
+
+  <select id="languageSelector" class="language-selector">
+    <option value="es">🇪🇸 Español</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="bn">🇧🇩 বাংলা</option>
+  </select>
 </nav>
 
 <!-- LOGO -->
 <div class="logo">
   <img src="Mafistudio4k.png" alt="Mafistudio Logo">
   <h1>MAFISTUDIO</h1>
-  <p>Estudio indie cubano-canadiense | Unreal Engine</p>
+  <p data-i18n="studio_subtitle">
+    Estudio indie cubano-canadiense | Unreal Engine
+  </p>
 </div>
 
 <!-- SOBRE -->
 <section id="about">
   <div class="about">
-    <p>
-      Mafistudio es un estudio indie creado por Mafiageta Gamer, enfocado en crear experiencias únicas con gameplay pulido y estilo propio.
+    <p data-i18n="about_text">
+      Mafistudio es un estudio indie creado por Mafiageta Gamer,
+      enfocado en crear experiencias únicas con gameplay pulido y estilo propio.
     </p>
   </div>
 </section>
@@ -189,20 +221,34 @@ section {
 <!-- JUEGOS -->
 <section id="games">
 
-  <h2 class="section-title">Juegos</h2>
+  <h2 class="section-title" data-i18n="games_title">Juegos</h2>
 
   <div class="games">
 
-    <div class="game" onclick="window.open('https://youtu.be/Gkge6qWd2zs?si=9OoFfNYFB3nyXDDx')">
+    <div class="game"
+         onclick="window.open('https://youtu.be/Gkge6qWd2zs?si=9OoFfNYFB3nyXDDx')">
+
       <img src="RushRoomIcon.png" alt="RoomRush">
+
       <h3>RoomRush</h3>
-      <p>Horror VHS inspirado en Backrooms.</p>
+
+      <p data-i18n="roomrush_description">
+        Horror VHS inspirado en Backrooms.
+      </p>
+
     </div>
 
-    <div class="game" onclick="window.open('https://mafiageta.itch.io/vaeryn')">
+    <div class="game"
+         onclick="window.open('https://mafiageta.itch.io/vaeryn')">
+
       <img src="enigma.png" alt="Vaeryn">
+
       <h3>Vaeryn</h3>
-      <p>RPG fantasía survival en desarrollo.</p>
+
+      <p data-i18n="vaeryn_description">
+        RPG fantasía survival en desarrollo.
+      </p>
+
     </div>
 
   </div>
@@ -211,14 +257,21 @@ section {
 <!-- APPS -->
 <section id="apps">
 
-  <h2 class="section-title">Apps</h2>
+  <h2 class="section-title" data-i18n="apps_title">Apps</h2>
 
   <div class="games">
 
-    <div class="game" onclick="window.open('https://mafiageta.itch.io/mafiflow', '_blank')">
+    <div class="game"
+         onclick="window.open('https://mafiageta.itch.io/mafiflow', '_blank')">
+
       <img src="MafiFlow.png?v=2" alt="MafiFlow">
+
       <h3>MafiFlow</h3>
-      <p>Administra tus finanzas de forma simple, privada y a tu manera.</p>
+
+      <p data-i18n="mafiflow_description">
+        Administra tus finanzas de forma simple, privada y a tu manera.
+      </p>
+
     </div>
 
   </div>
@@ -226,24 +279,307 @@ section {
 
 <!-- REDES -->
 <section>
-  <div class="socials">
-    <h2>Redes</h2>
 
-    <a href="https://tiktok.com/@mafiageta.gamer" target="_blank">TikTok</a>
-    <a href="https://discord.gg/bQcBrzudbF" target="_blank">Discord</a>
-    <a href="https://kick.com/mafiageta-gamer" target="_blank">Kick</a>
-    <a href="https://twitch.tv/Mafiageta" target="_blank">Twitch</a>
-    <a href="https://www.youtube.com/@Mafiageta" target="_blank">YouTube</a>
+  <div class="socials">
+
+    <h2 data-i18n="socials_title">Redes</h2>
+
+    <a href="https://tiktok.com/@mafiageta.gamer" target="_blank">
+      TikTok
+    </a>
+
+    <a href="https://discord.gg/bQcBrzudbF" target="_blank">
+      Discord
+    </a>
+
+    <a href="https://kick.com/mafiageta-gamer" target="_blank">
+      Kick
+    </a>
+
+    <a href="https://twitch.tv/Mafiageta" target="_blank">
+      Twitch
+    </a>
+
+    <a href="https://www.youtube.com/@Mafiageta" target="_blank">
+      YouTube
+    </a>
 
   </div>
+
 </section>
 
 <!-- CONTACTO -->
 <section id="contact">
+
   <div class="contact">
-    <p>Contacto: mafiagetagamer@gmail.com</p>
+
+    <p>
+      <span data-i18n="contact_text">Contacto</span>:
+      mafiagetagamer@gmail.com
+    </p>
+
   </div>
+
 </section>
+
+
+<script>
+
+/* ============================
+   TRADUCCIONES
+============================ */
+
+const translations = {
+
+  es: {
+    nav_about: "Sobre",
+    nav_games: "Juegos",
+    nav_apps: "Apps",
+    nav_contact: "Contactar",
+
+    studio_subtitle:
+      "Estudio indie cubano-canadiense | Unreal Engine",
+
+    about_text:
+      "Mafistudio es un estudio indie creado por Mafiageta Gamer, enfocado en crear experiencias únicas con gameplay pulido y estilo propio.",
+
+    games_title: "Juegos",
+
+    roomrush_description:
+      "Horror VHS inspirado en Backrooms.",
+
+    vaeryn_description:
+      "RPG fantasía survival en desarrollo.",
+
+    apps_title: "Apps",
+
+    mafiflow_description:
+      "Administra tus finanzas de forma simple, privada y a tu manera.",
+
+    socials_title: "Redes",
+
+    contact_text: "Contacto"
+  },
+
+
+  en: {
+    nav_about: "About",
+    nav_games: "Games",
+    nav_apps: "Apps",
+    nav_contact: "Contact",
+
+    studio_subtitle:
+      "Cuban-Canadian indie studio | Unreal Engine",
+
+    about_text:
+      "Mafistudio is an indie studio created by Mafiageta Gamer, focused on creating unique experiences with polished gameplay and its own distinctive style.",
+
+    games_title: "Games",
+
+    roomrush_description:
+      "VHS horror inspired by the Backrooms.",
+
+    vaeryn_description:
+      "Fantasy survival RPG currently in development.",
+
+    apps_title: "Apps",
+
+    mafiflow_description:
+      "Manage your finances simply, privately, and your way.",
+
+    socials_title: "Socials",
+
+    contact_text: "Contact"
+  },
+
+
+  fr: {
+    nav_about: "À propos",
+    nav_games: "Jeux",
+    nav_apps: "Apps",
+    nav_contact: "Contact",
+
+    studio_subtitle:
+      "Studio indépendant cubano-canadien | Unreal Engine",
+
+    about_text:
+      "Mafistudio est un studio indépendant créé par Mafiageta Gamer, axé sur la création d'expériences uniques avec un gameplay soigné et un style distinctif.",
+
+    games_title: "Jeux",
+
+    roomrush_description:
+      "Horreur VHS inspirée des Backrooms.",
+
+    vaeryn_description:
+      "RPG de survie fantastique actuellement en développement.",
+
+    apps_title: "Applications",
+
+    mafiflow_description:
+      "Gérez vos finances simplement, en toute confidentialité et à votre façon.",
+
+    socials_title: "Réseaux",
+
+    contact_text: "Contact"
+  },
+
+
+  de: {
+    nav_about: "Über uns",
+    nav_games: "Spiele",
+    nav_apps: "Apps",
+    nav_contact: "Kontakt",
+
+    studio_subtitle:
+      "Kubanisch-kanadisches Indie-Studio | Unreal Engine",
+
+    about_text:
+      "Mafistudio ist ein von Mafiageta Gamer gegründetes Indie-Studio, das einzigartige Erlebnisse mit ausgefeiltem Gameplay und einem eigenen Stil entwickelt.",
+
+    games_title: "Spiele",
+
+    roomrush_description:
+      "VHS-Horror, inspiriert von den Backrooms.",
+
+    vaeryn_description:
+      "Fantasy-Survival-RPG, das sich derzeit in Entwicklung befindet.",
+
+    apps_title: "Apps",
+
+    mafiflow_description:
+      "Verwalte deine Finanzen einfach, privat und auf deine Weise.",
+
+    socials_title: "Soziale Netzwerke",
+
+    contact_text: "Kontakt"
+  },
+
+
+  bn: {
+    nav_about: "আমাদের সম্পর্কে",
+    nav_games: "গেমস",
+    nav_apps: "অ্যাপস",
+    nav_contact: "যোগাযোগ",
+
+    studio_subtitle:
+      "কিউবান-কানাডিয়ান ইন্ডি স্টুডিও | Unreal Engine",
+
+    about_text:
+      "Mafistudio হলো Mafiageta Gamer দ্বারা প্রতিষ্ঠিত একটি ইন্ডি স্টুডিও, যা উন্নত গেমপ্লে এবং নিজস্ব স্বতন্ত্র শৈলীর মাধ্যমে অনন্য অভিজ্ঞতা তৈরি করার উপর গুরুত্ব দেয়।",
+
+    games_title: "গেমস",
+
+    roomrush_description:
+      "Backrooms দ্বারা অনুপ্রাণিত VHS হরর।",
+
+    vaeryn_description:
+      "বর্তমানে নির্মাণাধীন একটি ফ্যান্টাসি সারভাইভাল RPG।",
+
+    apps_title: "অ্যাপস",
+
+    mafiflow_description:
+      "সহজে, ব্যক্তিগতভাবে এবং নিজের মতো করে আপনার অর্থ পরিচালনা করুন।",
+
+    socials_title: "সামাজিক মাধ্যম",
+
+    contact_text: "যোগাযোগ"
+  }
+
+};
+
+
+/* ============================
+   APLICAR IDIOMA
+============================ */
+
+function applyLanguage(language) {
+
+  if (!translations[language]) {
+    language = "en";
+  }
+
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+
+    const key = element.getAttribute("data-i18n");
+
+    if (translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+
+  });
+
+  document.getElementById("languageSelector").value = language;
+
+}
+
+
+/* ============================
+   DETECTAR IDIOMA
+============================ */
+
+function getInitialLanguage() {
+
+  /* Primero comprobamos si el usuario
+     eligió uno anteriormente */
+
+  const savedLanguage =
+    localStorage.getItem("mafistudio-language");
+
+  if (savedLanguage && translations[savedLanguage]) {
+    return savedLanguage;
+  }
+
+
+  /* Si nunca eligió uno,
+     detectamos el navegador */
+
+  const browserLanguage =
+    navigator.language
+      .toLowerCase()
+      .split("-")[0];
+
+
+  if (translations[browserLanguage]) {
+    return browserLanguage;
+  }
+
+
+  /* Idioma por defecto */
+
+  return "en";
+}
+
+
+/* ============================
+   SELECTOR MANUAL
+============================ */
+
+const languageSelector =
+  document.getElementById("languageSelector");
+
+languageSelector.addEventListener("change", function() {
+
+  const selectedLanguage = this.value;
+
+  localStorage.setItem(
+    "mafistudio-language",
+    selectedLanguage
+  );
+
+  applyLanguage(selectedLanguage);
+
+});
+
+
+/* ============================
+   INICIAR WEB
+============================ */
+
+applyLanguage(getInitialLanguage());
+
+</script>
 
 </body>
 </html>
