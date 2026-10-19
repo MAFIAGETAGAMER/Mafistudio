@@ -48,3 +48,13 @@ No se han copiado las fotografías, proyectos ficticios ni los datos personales 
 - Los enlaces a Discord y otros perfiles mantienen **exactamente** las direcciones originales; si cambian, actualízalos manualmente.
 - Si editas directamente un texto dentro de `index.html`, ten en cuenta que algunos textos visibles se sustituyen por las traducciones de `assets/app.js` al cargar la página.
 - La versión en vivo no se modifica hasta que tú subas los archivos a GitHub Pages.
+
+## Actualización v3 — Identidad de marca
+
+- Barra de navegación: ahora muestra el **emblema original sin letras**, proporcionado por Mafistudio.
+- Tarjeta "Sobre el estudio": se cambió el logo largo por el emblema, centrado y dimensionado sin cortar sus extremos ni superponer el texto.
+- Contacto y favicon: el emblema también sustituye decoraciones de otras marcas.
+- Eslogan: traducción en ES/EN/FR/DE/BN, sincronizada con el selector y guardada como antes.
+- `assets/mafistudio-emblema.png` es una copia transparente de la imagen facilitada; `assets/mafistudio-emblema.webp` es la versión web optimizada.
+
+El lema inglés oficial se conserva literalmente: **WE DON'T PLAY NICE. WE PLAY BETTER.**

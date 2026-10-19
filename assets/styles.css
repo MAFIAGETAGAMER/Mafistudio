@@ -39,3 +39,44 @@ html[lang="bn"] .section-heading h2,html[lang="bn"] .contact-content h2{letter-s
 @media(max-width:650px){html[lang="de"] .hero h1,html[lang="fr"] .hero h1{font-size:clamp(2.35rem,9.3vw,3.75rem)}html[lang="bn"] .hero h1{font-size:clamp(2.35rem,8vw,3.2rem)}}
 
 @keyframes floatSlow{from{transform:translate(-50%,-51%) scale(.985)}to{transform:translate(-50%,-47%) scale(1.015)}}
+
+/* Mafistudio v3 — correct branding and responsive multilingual slogan. */
+.brand-icon{
+  width:40px;height:40px;min-width:40px;border-radius:14px;
+  padding:4px;background:linear-gradient(135deg,#262232,#0e0d18);
+  border:1px solid rgba(255,204,111,.19);
+}
+.brand-icon img{width:100%;height:100%;object-fit:contain;display:block}
+.about-logo-mark{
+  position:absolute;left:50%;top:46%;width:min(58%,290px);height:auto;
+  max-height:66%;object-fit:contain;opacity:1;z-index:1;
+  filter:drop-shadow(0 14px 30px rgba(253,173,78,.18));
+  animation:floatSlow 7s ease-in-out infinite alternate;
+}
+.about-visual-inner{display:block;isolation:isolate}
+.about-visual-bottom{z-index:2}
+#hero-title{font-size:clamp(2.75rem,4.6vw,5rem);line-height:1.06;letter-spacing:-.066em;overflow-wrap:normal}
+.slogan-line{display:inline-block;max-width:100%;text-wrap:balance}
+html[lang="es"] #hero-title{font-size:clamp(2.65rem,4.4vw,4.85rem)}
+html[lang="fr"] #hero-title,html[lang="de"] #hero-title{font-size:clamp(2.45rem,4.05vw,4.6rem)}
+html[lang="bn"] #hero-title{font-size:clamp(2.4rem,4.1vw,4.7rem);letter-spacing:-.015em;line-height:1.2}
+.contact-art{width:min(40%,285px);opacity:.12}
+@media(max-width:900px){
+ .about-logo-mark{width:min(56%,270px);max-height:64%}
+ #hero-title,html[lang="es"] #hero-title,html[lang="fr"] #hero-title,html[lang="de"] #hero-title{font-size:clamp(2.8rem,6.6vw,4.8rem)}
+ html[lang="bn"] #hero-title{font-size:clamp(2.55rem,6.3vw,4.3rem)}
+}
+@media(max-width:650px){
+ .brand-icon{width:36px;height:36px;min-width:36px;padding:3px}
+ .about-logo-mark{width:min(57%,190px);max-height:62%}
+ .about-visual-bottom{bottom:18px}
+ #hero-title,html[lang="es"] #hero-title,html[lang="fr"] #hero-title,html[lang="de"] #hero-title{font-size:clamp(2.35rem,8.75vw,3.6rem);letter-spacing:-.065em;line-height:1.09}
+ html[lang="bn"] #hero-title{font-size:clamp(2.13rem,8.1vw,3.1rem)}
+ .slogan-line{overflow-wrap:anywhere}
+ .contact-art{width:115px;opacity:.10}
+}
+@media(max-width:390px){
+ .brand-icon{width:33px;height:33px;min-width:33px;padding:3px}
+ #hero-title,html[lang="es"] #hero-title,html[lang="fr"] #hero-title,html[lang="de"] #hero-title{font-size:clamp(2.14rem,8.6vw,2.75rem)}
+}
+@media(prefers-reduced-motion:reduce){.about-logo-mark{animation:none!important}}

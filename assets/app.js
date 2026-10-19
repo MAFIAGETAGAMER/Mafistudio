@@ -227,9 +227,9 @@ const additions = {
     "theme_toggle": "Cambiar tema",
     "nav_home": "Inicio",
     "hero_eyebrow": "ESTUDIO INDEPENDIENTE · CUBANO-CANADIENSE",
-    "hero_title_1": "WE DON'T PLAY NICE.",
-    "hero_title_2": "WE PLAY",
-    "hero_title_3": "BETTER.",
+    "hero_title_1": "NO JUGAMOS PARA CAER BIEN.",
+    "hero_title_2": "JUGAMOS",
+    "hero_title_3": "MEJOR.",
     "hero_description": "Videojuegos con identidad propia y herramientas pensadas para hacer la vida un poco más sencilla. Una idea a la vez.",
     "cta_projects": "Explorar proyectos",
     "cta_about": "Conoce el estudio",
@@ -325,9 +325,9 @@ const additions = {
     "theme_toggle": "Changer de thème",
     "nav_home": "Accueil",
     "hero_eyebrow": "STUDIO INDÉPENDANT · CUBANO-CANADIEN",
-    "hero_title_1": "WE DON'T PLAY NICE.",
-    "hero_title_2": "WE PLAY",
-    "hero_title_3": "BETTER.",
+    "hero_title_1": "ON NE JOUE PAS GENTIMENT.",
+    "hero_title_2": "ON JOUE",
+    "hero_title_3": "MIEUX.",
     "hero_description": "Des jeux à l’identité unique et des outils pensés pour simplifier un peu le quotidien. Une idée à la fois.",
     "cta_projects": "Explorer les projets",
     "cta_about": "Découvrir le studio",
@@ -374,9 +374,9 @@ const additions = {
     "theme_toggle": "Design wechseln",
     "nav_home": "Start",
     "hero_eyebrow": "UNABHÄNGIGES · KUBANISCH-KANADISCHES STUDIO",
-    "hero_title_1": "WE DON'T PLAY NICE.",
-    "hero_title_2": "WE PLAY",
-    "hero_title_3": "BETTER.",
+    "hero_title_1": "WIR SPIELEN NICHT NETT.",
+    "hero_title_2": "WIR SPIELEN",
+    "hero_title_3": "BESSER.",
     "hero_description": "Spiele mit eigener Identität und praktische Tools, die den Alltag etwas leichter machen. Idee für Idee.",
     "cta_projects": "Projekte entdecken",
     "cta_about": "Studio kennenlernen",
@@ -423,9 +423,9 @@ const additions = {
     "theme_toggle": "থিম পরিবর্তন করুন",
     "nav_home": "হোম",
     "hero_eyebrow": "স্বাধীন · কিউবান-কানাডিয়ান স্টুডিও",
-    "hero_title_1": "WE DON'T PLAY NICE.",
-    "hero_title_2": "WE PLAY",
-    "hero_title_3": "BETTER.",
+    "hero_title_1": "আমরা ভদ্রভাবে খেলি না।",
+    "hero_title_2": "আমরা খেলি",
+    "hero_title_3": "আরও ভালো।",
     "hero_description": "নিজস্ব পরিচয়ের গেম এবং দৈনন্দিন জীবনকে সহজ করার জন্য তৈরি টুল। একটি করে নতুন ধারণা।",
     "cta_projects": "প্রজেক্ট দেখুন",
     "cta_about": "স্টুডিও সম্পর্কে",
@@ -504,7 +504,7 @@ function applyLanguage(language) {
     const value = translations[language][key] ?? translations.en[key];
     if (value) element.setAttribute('aria-label', value);
   });
-  document.title = 'Mafistudio — ' + (language === 'es' ? 'Creamos mundos' : language === 'fr' ? 'Créons des univers' : language === 'de' ? 'Wir erschaffen Welten' : language === 'bn' ? 'নতুন জগৎ সৃষ্টি করি' : 'Independent worlds. Original ideas.');
+  document.title = 'Mafistudio — ' + translations[language].hero_title_1 + ' ' + translations[language].hero_title_2 + ' ' + translations[language].hero_title_3;
 }
 function getSavedLanguage() {
   try {
