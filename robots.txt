@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mafiagetagamer.github.io/Mafistudio/sitemap.xml
